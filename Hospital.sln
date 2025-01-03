@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{1C95BE9C-1B2E-4193-8A04-B64634B0B1CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01- Comun", "01- Comun", "{78CD2536-2968-4F5B-BC7D-38BD4824D01E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02- Modelo", "02- Modelo", "{C41D3329-C183-41DD-9A75-0B4106E5D5BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03- Acceso a Datos", "03- Acceso a Datos", "{4D8FBD15-EFFD-4808-A4C2-28652D8167D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04- Client Rest", "04- Client Rest", "{14C8782E-BA9D-4E8B-98A9-E5589EDAA460}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05- Logica de Negocio", "05- Logica de Negocio", "{05BE8328-6721-478D-A0A9-D5AB51CB9486}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06- Web API", "06- Web API", "{0F2D3321-D6DE-4B50-A917-8D26F09FD505}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C95BE9C-1B2E-4193-8A04-B64634B0B1CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C95BE9C-1B2E-4193-8A04-B64634B0B1CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C95BE9C-1B2E-4193-8A04-B64634B0B1CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C95BE9C-1B2E-4193-8A04-B64634B0B1CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1C95BE9C-1B2E-4193-8A04-B64634B0B1CE} = {0F2D3321-D6DE-4B50-A917-8D26F09FD505}
+	EndGlobalSection
+EndGlobal
