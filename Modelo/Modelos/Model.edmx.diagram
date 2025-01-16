@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6b5c19f7e6304d79945ebc44add1dc9b" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Egreso" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Ingreso" Width="1.5" PointX="6" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Medico" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Paciente" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK__Egreso__medicoId__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Egreso__paciente__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Ingreso__medicoI__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Ingreso__pacient__403A8C7D" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
