@@ -54,6 +54,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexto\DBConexion.cs" />
+    <Compile Include="Metadatos\Egreso.cs" />
+    <Compile Include="Metadatos\Ingreso.cs" />
+    <Compile Include="Metadatos\Medico.cs" />
+    <Compile Include="Metadatos\Paciente.cs" />
     <Compile Include="Modelos\Egreso.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -100,7 +104,9 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Validadores\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Modelos\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
