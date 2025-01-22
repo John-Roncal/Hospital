@@ -7,9 +7,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace WebAPI.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class MedicoController : ApiController
     {
         [HttpGet]
@@ -32,7 +34,7 @@ namespace WebAPI.Controllers
             return Content(respuesta.codigo, respuesta);
         }
 
-        /*[HttpGet]
+        [HttpGet]
         public IHttpActionResult LeerUno(long id)
         {
 
@@ -52,6 +54,6 @@ namespace WebAPI.Controllers
         public IHttpActionResult Eliminar(List<long> ids)
         { 
         
-        }*/
+        }
     }
 }
