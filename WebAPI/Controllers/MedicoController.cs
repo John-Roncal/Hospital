@@ -37,23 +37,90 @@ namespace WebAPI.Controllers
         [HttpGet]
         public IHttpActionResult LeerUno(long id)
         {
+            var respuesta = new RespuestaVMR<MedicoVMR>();
 
+            try
+            {
+                respuesta.datos = MedicoBLL.LeerUno(id);
+            }
+            catch (Exception ex)
+            {
+                respuesta.codigo = HttpStatusCode.InternalServerError;
+                respuesta.datos = null;
+                respuesta.mensajes.Add(ex.Message);
+                respuesta.mensajes.Add(ex.ToString());
+            }
+
+            if (respuesta.datos == null && respuesta.mensajes.Count() == 0)
+            {
+                respuesta.codigo = HttpStatusCode.NotFound;
+                respuesta.mensajes.Add("Elemento no encontrado");
+            }
+
+            return Content(respuesta.codigo, respuesta);
         }
 
         [HttpPost]
         public IHttpActionResult Crear(Medico item)
         {
+            var respuesta = new RespuestaVMR<long?>();
 
+            try
+            {
+                respuesta.datos = MedicoBLL.Crear(item);
+            }
+            catch (Exception ex)
+            {
+                respuesta.codigo = HttpStatusCode.InternalServerError;
+                respuesta.datos = null;
+                respuesta.mensajes.Add(ex.Message);
+                respuesta.mensajes.Add(ex.ToString());
+            }
+
+            return Content(respuesta.codigo, respuesta);
         }
 
+        [HttpPut]
         public IHttpActionResult Actualizar(long id, MedicoVMR item)
         {
-        
+            var respuesta = new RespuestaVMR<bool>();
+
+            try
+            {
+                item.id = id;
+                MedicoBLL.Actualizar(item);
+                respuesta.datos = true;
+            }
+            catch (Exception ex)
+            {
+                respuesta.codigo = HttpStatusCode.InternalServerError;
+                respuesta.datos = false;
+                respuesta.mensajes.Add(ex.Message);
+                respuesta.mensajes.Add(ex.ToString());
+            }
+
+            return Content(respuesta.codigo, respuesta);
         }
 
+        [HttpDelete]
         public IHttpActionResult Eliminar(List<long> ids)
-        { 
-        
+        {
+            var respuesta = new RespuestaVMR<bool>();
+
+            try
+            {
+                MedicoBLL.Eliminar(ids);
+                respuesta.datos = true;
+            }
+            catch (Exception ex)
+            {
+                respuesta.codigo = HttpStatusCode.InternalServerError;
+                respuesta.datos = false;
+                respuesta.mensajes.Add(ex.Message);
+                respuesta.mensajes.Add(ex.ToString());
+            }
+
+            return Content(respuesta.codigo, respuesta);
         }
     }
 }
